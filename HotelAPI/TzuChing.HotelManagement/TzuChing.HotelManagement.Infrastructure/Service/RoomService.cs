@@ -60,13 +60,24 @@ namespace TzuChing.HotelManagement.Infrastructure.Service
             };
         }
 
-        public async Task<BasicResponse> RemoveRoomType (RoomTypeRequest request)
+        public async Task<BasicResponse> RemoveRoomType (int id)
         {
-            var room = await _roomTypeRepository.GetByIdAsync(request.Id);
+            var room = await _roomTypeRepository.GetByIdAsync(id);
             if (room == null)
-                return new BasicResponse() { Message = $"{request.RTDESC} is not existed!" };
+                return new BasicResponse() { Message = $"{id} is not existed!" };
             await _roomTypeRepository.DeleteAsync(room);
             return new BasicResponse() { Message = "Success" };
+        }
+
+        public async Task<RoomTypeResponse> GetRoomTypeById (int id)
+        {
+            var type = await _roomTypeRepository.GetByIdAsync(id);
+            if (type == null)
+                return new RoomTypeResponse() { Message = "Not existed!" };
+            return new RoomTypeResponse() { 
+                RoomType = type,
+                Message = "Success"
+            };
         }
 
         public async Task<RoomResponse> AddRoom (RoomRequest request)
@@ -118,6 +129,23 @@ namespace TzuChing.HotelManagement.Infrastructure.Service
             var result = await _roomRepository.ListAllAsync();
             return new ListAllRoomsResponse() { 
                 RoomList = ConvertToModel(result),
+                Message = "Success"
+            };
+        }
+
+        public async Task<RoomResponse> GetRoomById (int id)
+        {
+            var room = await _roomRepository.GetByIdAsync(id);
+            if (room == null)
+                return new RoomResponse() { Message = "Not existed" };
+            return new RoomResponse()
+            {
+                Room = new RoomModel()
+                {
+                    Id = room.Id,
+                    RoomTypeId = room.RoomTypeId,
+                    Status = room.Status
+                },
                 Message = "Success"
             };
         }

@@ -24,13 +24,17 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> AddRoomType(RoomTypeRequest request)
         {
             var result = await _roomService.AddRoomType(request);
+            if (result.Message != "Success")
+                return Conflict(result);
             return Ok(result);
         }
 
         [HttpPost("DeleteRoomType")]
-        public async Task<IActionResult> RemoveRoomType(RoomTypeRequest request)
+        public async Task<IActionResult> RemoveRoomType(int id)
         {
-            var result = await _roomService.RemoveRoomType(request);
+            var result = await _roomService.RemoveRoomType(id);
+            if (result.Message != "Success")
+                return Conflict(result);
             return Ok(result);
         }
 
@@ -38,6 +42,8 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> UpdateRoomType(RoomTypeRequest request)
         {
             var result = await _roomService.UpdateRoomType(request);
+            if (result.Message != "Success")
+                return Conflict(result);
             return Ok(result);
         }
 
@@ -45,6 +51,15 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> GetAllRoomTyps()
         {
             var result = await _roomService.GetAllRoomTypes();
+            return Ok(result);
+        }
+
+        [HttpPost("GetById")]
+        public async Task<IActionResult> GetTypeById (int id)
+        {
+            var result = await _roomService.GetRoomTypeById(id);
+            if (result.Message != "Success")
+                return NotFound(result);
             return Ok(result);
         }
     }

@@ -14,10 +14,12 @@ namespace TzuChing.HotelManagement.ApplicationCore.ServiceInterface
         Task<RoomTypeResponse> AddRoomType(RoomTypeRequest request);
         Task<RoomTypeResponse> UpdateRoomType(RoomTypeRequest request);
         Task<ListAllRoomTypeResponse> GetAllRoomTypes();
-        Task<BasicResponse> RemoveRoomType(RoomTypeRequest request);
+        Task<BasicResponse> RemoveRoomType(int id);
+        Task<RoomTypeResponse> GetRoomTypeById(int id);
         Task<RoomResponse> AddRoom(RoomRequest request);
         Task<ListAllRoomsResponse> GetAllRooms();
         Task<BasicResponse> RemoveRoom(int id);
         Task<RoomResponse> UpdateRoom(RoomRequest request);
+        Task<RoomResponse> GetRoomById(int id);
     }
 }
