@@ -1,0 +1,15 @@
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\bin\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.deps.json
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\bin\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.runtimeconfig.json
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\bin\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.runtimeconfig.dev.json
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\bin\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.dll
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\bin\Debug\net5.0\ref\TzuChing.HotelManagement.ApplicationCore.dll
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\bin\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.pdb
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.csprojAssemblyReference.cache
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.AssemblyInfoInputs.cache
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.AssemblyInfo.cs
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.csproj.CoreCompileInputs.cache
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.dll
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\ref\TzuChing.HotelManagement.ApplicationCore.dll
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.pdb
+D:\Job\(2)Antra-FullStack\HW\HotelManagement\HotelAPI\TzuChing.HotelManagement\TzuChing.HotelManagement.ApplicationCore\obj\Debug\net5.0\TzuChing.HotelManagement.ApplicationCore.genruntimeconfig.cache
