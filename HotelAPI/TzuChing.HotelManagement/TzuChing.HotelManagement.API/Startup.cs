@@ -38,7 +38,11 @@ namespace TzuChing.HotelManagement.API
 
             services.AddScoped<IRoomTypeRepository, RoomTypeRepository>();
             services.AddScoped<IRoomRepository,RoomRepository>();
+            services.AddScoped<ICustomerRepository,CustomerRepository>();
+            services.AddScoped<IServiceRepository,ServiceRepository>();
             services.AddScoped<IRoomService,RoomService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IServiceService,ServiceService>();
 
             services.AddSwaggerGen(c =>
             {
