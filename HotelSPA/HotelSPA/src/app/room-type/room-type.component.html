@@ -1,0 +1,19 @@
+<div>
+    <h1>Room Types</h1>
+    <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Room Type Description</th>
+              <th scope="col">Rent</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let type of types">
+              <th scope="row">{{ type.id }}</th>
+              <td><a [routerLink]="['/roomtype/', type.id ]">{{ type.rtdesc }}</a></td>
+              <td>{{ type.rent }}</td>
+            </tr>
+            </tbody>
+          </table>
+</div>

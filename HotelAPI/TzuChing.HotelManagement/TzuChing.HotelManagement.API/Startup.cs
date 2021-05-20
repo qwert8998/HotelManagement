@@ -65,6 +65,10 @@ namespace TzuChing.HotelManagement.API
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TzuChing.HotelManagement.API v1"));
             }
 
+            app.UseCors(builder => {
+                builder.WithOrigins(Configuration.GetValue<string>("ClientSPAUrl")).AllowAnyHeader().AllowAnyMethod();
+            });
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

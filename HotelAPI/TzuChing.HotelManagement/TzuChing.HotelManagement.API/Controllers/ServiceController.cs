@@ -29,7 +29,7 @@ namespace TzuChing.HotelManagement.API.Controllers
             return Ok(result);
         }
 
-        [HttpPost("UpdateService")]
+        [HttpPut("UpdateService")]
         public async Task<IActionResult> UpdateService(ServiceRequest request)
         {
             var result = await _serviceService.UpdateService(request);
@@ -38,7 +38,7 @@ namespace TzuChing.HotelManagement.API.Controllers
             return Ok(result);
         }
 
-        [HttpPost("DeleteService")]
+        [HttpDelete("DeleteService")]
         public async Task<IActionResult> DeleteService(int id)
         {
             var result = await _serviceService.DeleteService(id);
@@ -53,10 +53,10 @@ namespace TzuChing.HotelManagement.API.Controllers
             var result = await _serviceService.GetAllService();
             if (result.Message != "Success")
                 return Conflict(result);
-            return Ok(result);
+            return Ok(result.List);
         }
 
-        [HttpPost("GetById")]
+        [HttpGet("GetById")]
         public async Task<IActionResult> GetServiceById(int id)
         {
             var result = await _serviceService.GetServiceById(id);
