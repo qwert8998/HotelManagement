@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../core/services/service.service';
+import { serv } from '../shared/serv';
 
 @Component({
   selector: 'app-service',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServiceComponent implements OnInit {
 
-  constructor() { }
+  servs: serv[] | undefined;
+
+  constructor(private service: ServiceService) { }
 
   ngOnInit(): void {
+    this.service.getAllServs().subscribe(res => {
+      this.servs = res
+      console.table(this.servs);
+    });
   }
 
+  delete(id: number)
+  {
+    console.log(id);
+    this.service.deleteOne(id).subscribe(res => {
+      console.log(res.message);
+    });
+    this.ngOnInit();
+  }
 }

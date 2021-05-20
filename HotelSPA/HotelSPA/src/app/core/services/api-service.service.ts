@@ -44,9 +44,9 @@ export class ApiServiceService {
   }
 
   //Delete
-  delete(path: string,id? : number) {
+  delete(path: string,id : number): Observable<any> {
     return this.http
-    .delete(`${environment.apiurl}${path}` + id).pipe(
-      map(resp => resp as any));
+    .delete(`${environment.apiurl}${path}`+ '/?id=' + id)
+    .pipe(map(resp => resp as any));
   }
 }

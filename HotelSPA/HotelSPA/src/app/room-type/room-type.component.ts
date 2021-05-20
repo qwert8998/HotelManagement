@@ -20,4 +20,12 @@ export class RoomTypeComponent implements OnInit {
     });
   }
 
+  delete(id: number)
+  {
+    console.log(id);
+    this.roomtype.deleteRoomType(id).subscribe(res => {
+      console.log(res.message);
+      this.ngOnInit();
+    }); 
+  }
 }

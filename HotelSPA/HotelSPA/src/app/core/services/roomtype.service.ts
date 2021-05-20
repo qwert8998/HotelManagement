@@ -3,6 +3,7 @@ import { ApiServiceService } from './api-service.service';
 import { Observable } from 'rxjs';
 import { roomtypedetail } from 'src/app/shared/roomtype';
 import { roomtyperes } from 'src/app/shared/response/roomtyperes';
+import { basicres } from 'src/app/shared/response/basicres';
 
 @Injectable({
   providedIn: 'root'
@@ -24,5 +25,15 @@ export class RoomtypeService {
   updateRoomType(resource: any): Observable<roomtyperes>
   {
     return this.apiService.update('RoomType/UpdateRoomType', resource);
+  }
+
+  createRoonType(resource: any): Observable<roomtyperes>
+  {
+    return this.apiService.create('RoomType/AddRoomType',resource);
+  }
+
+  deleteRoomType(id:number): Observable<basicres>
+  {
+    return this.apiService.delete('RoomType/DeleteRoomType',id);
   }
 }
