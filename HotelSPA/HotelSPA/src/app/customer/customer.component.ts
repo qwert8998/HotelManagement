@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from '../core/services/customer.service';
+import { cust } from '../shared/response/cust';
 
 @Component({
   selector: 'app-customer',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerComponent implements OnInit {
 
-  constructor() { }
+  custs: cust[] | undefined;
+
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
+    this.customerService.getAllCusts().subscribe(res => {
+      this.custs = res;
+      console.table(this.custs);
+    });
   }
 
+  delete(id: number)
+  {
+    this.customerService.deleteOne(id).subscribe(res => {
+      console.log(res.message);
+      this.ngOnInit();
+    });
+  }
 }

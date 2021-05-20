@@ -31,7 +31,9 @@ namespace TzuChing.HotelManagement.Infrastructure.Service
 
         public async Task<CustomerResponse> AddCustomer (CustomerRequest request)
         {
-            if(request.RoomId != null)
+            if (!CheckParam(request))
+                return new CustomerResponse() { Message = "Parameter is missing!" };
+            if (request.RoomId != null)
             {
                 var room = await _roomRepository.GetByIdAsync(request.RoomId.Value);
                 if(room != null)
@@ -71,6 +73,8 @@ namespace TzuChing.HotelManagement.Infrastructure.Service
 
         public async Task<CustomerResponse> UpdateCustomer (CustomerRequest request)
         {
+            if (!CheckParam(request))
+                return new CustomerResponse() { Message = "Parameter is missing!" };
             if (!await UpdateRoom(request))
                 return new CustomerResponse() { Message = "Room has been booked!" };
 
@@ -113,6 +117,18 @@ namespace TzuChing.HotelManagement.Infrastructure.Service
             var response = _mapper.Map<CustomerResponse>(result);
             response.Message = "Success";
             return response;
+        }
+
+        private bool CheckParam (CustomerRequest request)
+        {
+            if (request.RoomId == 0)
+                request.RoomId = null;
+            if(request.RoomId != null)
+            {
+                if (request.CheckIn == null || request.BookingDays == null)
+                    return false;
+            }
+            return true;
         }
 
         private async Task AddService(CustomerRequest request, decimal? rent)

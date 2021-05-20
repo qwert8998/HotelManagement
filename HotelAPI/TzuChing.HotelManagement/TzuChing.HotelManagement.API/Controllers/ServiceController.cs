@@ -24,8 +24,6 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> AddService (ServiceRequest request)
         {
             var result = await _serviceService.AddService(request);
-            if (result.Message != "Success")
-                return Conflict(result);
             return Ok(result);
         }
 
@@ -33,8 +31,6 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> UpdateService(ServiceRequest request)
         {
             var result = await _serviceService.UpdateService(request);
-            if (result.Message != "Success")
-                return Conflict(result);
             return Ok(result);
         }
 

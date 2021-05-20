@@ -13,6 +13,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { RoomdetailComponent } from './roomdetail/roomdetail.component';
 import { RoomtypedetailComponent } from './roomtypedetail/roomtypedetail.component';
 import { ServiComponent } from './servi/servi.component';
+import { CustdetailComponent } from './custdetail/custdetail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ServiComponent } from './servi/servi.component';
     CustomerComponent,
     RoomdetailComponent,
     RoomtypedetailComponent,
-    ServiComponent
+    ServiComponent,
+    CustdetailComponent
   ],
   imports: [
     BrowserModule,

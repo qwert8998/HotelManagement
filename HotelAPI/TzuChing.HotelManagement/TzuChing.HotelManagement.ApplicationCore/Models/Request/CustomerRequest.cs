@@ -18,5 +18,7 @@ namespace TzuChing.HotelManagement.ApplicationCore.Models.Request
         public int? TotalPersons { get; set; }
         public int? BookingDays { get; set; }
         public decimal? Advance { get; set; }
+        public string Message { get; set; }
+        public int StatusCode { get; set; }
     }
 }

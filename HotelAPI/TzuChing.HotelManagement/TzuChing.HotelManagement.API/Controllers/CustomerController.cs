@@ -24,10 +24,6 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> AddCustomer(CustomerRequest request)
         {
             var result = await _customerService.AddCustomer(request);
-            if(result.Message != "Success")
-            {
-                return Conflict(result);
-            }
             return Ok(result);
         }
 
@@ -35,10 +31,6 @@ namespace TzuChing.HotelManagement.API.Controllers
         public async Task<IActionResult> UpdateCustomer(CustomerRequest request)
         {
             var result = await _customerService.UpdateCustomer(request);
-            if (result.Message != "Success")
-            {
-                return Conflict(result);
-            }
             return Ok(result);
         }
 

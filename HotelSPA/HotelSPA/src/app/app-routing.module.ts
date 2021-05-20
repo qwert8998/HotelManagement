@@ -7,6 +7,7 @@ import { RoomTypeComponent } from './room-type/room-type.component';
 import { RoomdetailComponent } from './roomdetail/roomdetail.component';
 import { RoomtypedetailComponent } from './roomtypedetail/roomtypedetail.component';
 import { ServiComponent } from './servi/servi.component';
+import { CustdetailComponent } from './custdetail/custdetail.component';
 
 const routes: Routes = [
   { path: "customer", component: CustomerComponent },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: "roomtype", component: RoomTypeComponent },
   { path: "roomtype/:id", component: RoomtypedetailComponent },
   { path: "room/:id", component: RoomdetailComponent },
-  { path: "serv/:id", component: ServiComponent }
+  { path: "serv/:id", component: ServiComponent },
+  { path: "cust/:id", component: CustdetailComponent }
 ];
 
 @NgModule({
